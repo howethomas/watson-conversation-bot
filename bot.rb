@@ -9,20 +9,21 @@ Artemis::Bot.configure do |config|
 
 workspace_id =  "6e75b003-3f06-4d55-b7ac-f3c4cf8501ae"
 
+input_text = gets()
+puts "Input text is " + input_text
+
 message_request = Artemis::Bot::MessageRequest.new
-message_request.input.text = "Hello there"
+message_request.input.text = input_text
 message_request.alternate_intents = true
 
-puts "This is before the call"
 response = Artemis::Bot::Conversator.message(workspace_id, message_request)
-puts "This is after the call"
+puts response.output.text
 ap response
-
 
 # assign the context from the previous response
 message_request.context = response.context
-message_request.input.text = "How you doing?"
+message_request.input.text = "1232312312"
 
 # send the message through the Conversator
 response = Artemis::Bot::Conversator.message(workspace_id, message_request)
-ap response
+puts response.output.text
