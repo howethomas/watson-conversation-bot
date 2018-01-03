@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'artemis-bot'
 gem 'awesome_print'
-gem 'pry'
+gem 'watson-conversation'
+gem 'rest-client'
+gem 'redis'
