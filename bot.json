@@ -1,11 +1,27 @@
 [{
   "default_cmd": "npm start",
-  "default_path": "./node_modules/default-bot",
-  "default_settings": [ ],
-  "desc": "A place holder bot, sort of like under construction",
-  "icon_class": "information",
-  "name": "default-bot"
+  "default_path": "./node_modules/watson-conversation-bot",
+  "default_settings": [
+   {
+      "name": "WATSON_USERNAME",
+      "value": "Username for the Watson Bluemix Service",
+      "type": "text"
+    },
+    {
+      "name": "PASSWORD",
+      "value": "Password for Watson BlueMix",
+      "type": "text"
+    },
+    {
+      "name": "WORKSPACE_ID",
+      "value": "Watson Bluemix Watson ID",
+      "type": "text"
+    }
+ ],
+  "desc": "A bot to connect a conversation to a Watson dialog",
+  "icon_class": "conversation",
+  "name": "watson-conversation-bot",
   "owner_cmd": "",
-  "short_desc": "A place holder bot, sort of like under construction",
-  "repo_link": "git@github.com/green-bot/default-bot.git"
+  "short_desc": "Watson Dialog Bot",
+  "repo_link": "https://github.com/howethomas/watson-conversation-bot"
 }]
