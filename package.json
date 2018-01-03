@@ -1,6 +1,6 @@
 {
   "name": "watson-conversation-bot",
-  "description":"Connects to the Watson Conversational Service",
+  "description": "Connects to the Watson Conversational Service",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "bundle exec ruby bot.rb",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url" : "https://github.com/oduonye1992/session-email-notifier-bot"
+    "url": "https://github.com/oduonye1992/session-email-notifier-bot"
   },
   "keywords": [
     "green-bot",
@@ -18,5 +18,5 @@
   ],
   "author": "Thomas Howe",
   "license": "MIT",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
