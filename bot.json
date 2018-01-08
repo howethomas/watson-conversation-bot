@@ -2,7 +2,12 @@
   "default_cmd": "npm start",
   "default_path": "./node_modules/watson-conversation-bot",
   "default_settings": [
-   {
+    {
+       "name": "GREETING",
+       "value": "Thank you for texting us! How can we help you?",
+       "type": "text"
+    },
+    {
       "name": "WATSON_USERNAME",
       "value": "Username for the Watson Bluemix Service",
       "type": "text"
