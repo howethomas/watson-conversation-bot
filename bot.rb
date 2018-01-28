@@ -7,7 +7,7 @@ require "json"
 
 # Extract parameters from the Bash environment
 # Greenbot will set these before the bot is executed
-greeting = ENV['GREETING'] || 'Thank you for texting us! How can we help you?'
+greeting = ENV['GREETING']
 watson_username = ENV['WATSON_USERNAME'] || ''
 password = ENV['PASSWORD'] || ''
 workspace_id = ENV['WORKSPACE_ID'] || ''
@@ -20,7 +20,7 @@ begin
   version="2017-02-03"
   endpoint = "#{url}/v1/workspaces/#{workspace_id}/message?version=#{version}"
 
-  puts greeting
+  puts greeting if greeting?
   # The first message should be sent to the conversation service.
   input_text = gets.strip
 
