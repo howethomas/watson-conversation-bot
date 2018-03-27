@@ -1,6 +1,8 @@
 # This is a bot designed to work with GreenBot https://github.com/green-bot/greenbot-core
 # Simply npm install this bot in the greenbot directory to install.
 #
+# rubocop:disable Metrics/LineLength
+
 require 'awesome_print'
 require 'rest-client'
 require 'json'
@@ -12,7 +14,6 @@ password = ENV['PASSWORD'] || ''
 workspace_id = ENV['WORKSPACE_ID'] || ''
 initial_msg = ENV['INITIAL_MSG'] || 'I need to talk to someone about my bill\n'
 loop_forever = ENV['LOOP_FOREVER'] == 'yes' ? true : false
-
 
 begin
   # Start the conversation service.
@@ -51,17 +52,11 @@ begin
     end
   end
 
-  response_body['intents'].each do |i|
-    puts "{{whisper: customer intent: #{i['intent']}: #{i['confidence'].to_f.round(2) * 100} % confidence}}"
-    $stdout.flush
-  end
-
   # While watson doesn't return the string 'botquit', keep forwarding the stdin
   # to it, express what is says back to stdout.
   keep_looping = loop_forever || !context['system']['branch_exited']
 
   while keep_looping
-    ap context['system']
     input_text = gets.strip
     body = {
       input: {
